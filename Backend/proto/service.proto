@@ -1,0 +1,39 @@
+ // protoc proto/blog.proto --go_out=plugins=grpc:.
+
+syntax = "proto3";
+
+package proto;
+
+// option go_package = "blogpb";
+
+message Restaurant {
+    string Name = 1;
+    float Rating = 2;
+    string Cuisines = 3;
+    string Address = 4;
+    int32 CFT =5;   
+}
+message requestOne{
+    string name = 1;
+
+}
+
+message responseAllRes{
+    repeated Restaurant resList = 1;
+}
+
+message requestAll{
+}
+
+
+message nresponse{
+    bool flag = 1;
+}
+
+service zomatoService {
+    rpc getRes(requestOne) returns (Restaurant){}
+    rpc getAllRes(requestAll) returns (responseAllRes){}
+    rpc editRes(Restaurant) returns (nresponse){}
+    rpc addRes(Restaurant) returns (nresponse){} 
+}
+

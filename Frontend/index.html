@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+            body{
+                padding:0;
+                margin:0;
+            }
+            header{
+                background-color: blue;
+                height: 100px;
+                text-align: center;
+                color: white;
+                
+            }
+            main{
+                display:flex;
+            }
+            main .read-tweets{
+                flex: 1;
+ 
+                height: 50px;
+                background-color: grey;
+                /* border-right: 5px solid black; */
+            }
+            main .post-tweets{
+                flex: 1;
+                text-align: center;
+                height: 50px;
+                background-color: lightgray;
+            }
+            .tweets{
+
+                border-right: 5px solid black;
+                height: 100vh;
+
+            }
+            .card-wrapper{
+                height:100vh;
+                padding:10px;
+                /* border-right: 5px; */
+
+            }
+            .card{
+                margin-top: 10px;
+                /* padding: 100px; */
+                border: 1px solid green;
+                height: 250px;
+                display: flex;
+                align-items: center;
+            }
+            .card-img{
+
+                width: 200px;
+            }
+            .card .info{
+                display:flex;
+            }
+            .card-img img {
+                border-radius: 50%;
+            }
+    </style>
+
+</head>
+
+
+<body>
+    <header>
+      <h1>
+        Twitter Clone
+      </h1>
+    </header>
+    <main>
+      <div class="read-tweets">
+        <p  style="text-align:center" class="heading">Tweets</p>
+        <div class="card-wrapper">
+        </div>
+      </div>
+      <div class = "tweets">
+
+      </div>
+      <div class="post-tweets">
+        <p>Post Tweets</p>
+      </div>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+  </html>
